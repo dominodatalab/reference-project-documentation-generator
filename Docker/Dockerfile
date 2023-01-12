@@ -1,6 +1,4 @@
-FROM quay.io/domino/base:Ubuntu18_DAD_Py2.7_R3.5-20190501
-
-RUN echo "ubuntu    ALL=NOPASSWD: ALL" >> /etc/sudoers
+FROM quay.io/domino/compute-environment-images:ubuntu20-py3.9-r4.2-domino5.3-standard
 
 RUN sudo add-apt-repository -y ppa:libreoffice/ppa
 
@@ -11,4 +9,3 @@ RUN sudo apt-get install -y libreoffice
 RUN echo 'libssl1.1 libraries/restart-without-asking boolean true' | sudo debconf-set-selections
 
 RUN sudo apt-get install -y texlive-latex-extra
-
