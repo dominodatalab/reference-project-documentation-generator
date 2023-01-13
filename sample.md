@@ -47,11 +47,6 @@ Estimation is via Maximum Likelihood. Given a vector of realized outcomes $D_i$ 
 
 $$L(\beta) = \prod_{i=1}^{n} p(x_i)^{D_i} (1 - p(x_i)^{1 - D_i})$$
 
-The log-likelihood is
-
-$$l(\beta) = \sum_{i=1}^{n} (-\log(1) + \exp{(\beta_0 + x_i \cdot \beta}) +  D_i  (\beta_0 + x_i \cdot \beta))$$
-
-
 ## Stylized Model Assumptions
 
 * The observations of the response variable D are independent from each other. This assumption is manifestly not true as it is well established the defaults are correlated (Default Dependency)
