@@ -10,7 +10,7 @@ Model documentation is a formal collection of documents that provide explanation
 
 Ideally, model documentation is maintained in a format that is open, easy for automatic processing, and straightforward for versioning. One such format is Markdown, which is easy to parse, validate, and process in an automated fashion. On the other hand, using Markdown for model documentation can often be problematic, because businesses have sometimes established risk management practices that rely on proprietary format templates (e.g. Word documents, PDF files etc.)
 
-One workflow that handles this situation well is via Pandoc, a free framework for converting files from one markup format into another. Pandoc supports a wide range of file formats like Markdown and Wiki markup formats, LaTeX, Microsoft Word, RTS, LibreOffice ODT, PDF, Microsoft Powerpoint, various e-book standards and more.
+One workflow that handles this situation well is via [Pandoc](http://pandoc.org/), a free framework for converting files from one markup format into another. Pandoc supports a wide range of file formats like Markdown and Wiki markup formats, LaTeX, Microsoft Word, RTS, LibreOffice ODT, PDF, Microsoft Powerpoint, various e-book standards and more.
 
 In this project we demonstrate a workflow for producing pixel-perfect model documentation by merging markdown with a Microsoft Word template and applying the relevant styles and formatting to the resulting document.
 
@@ -69,3 +69,10 @@ rstudio:
     port: 8888
     requireSubdomain: false
 ```
+## Workflow
+
+The model documentation workflow is implemented as follows:
+* Model documentation is written and stored as part of the Domino project. It is considered best practice to use an open format that is easy for machine parsing and processing (e.g. Markdown, LaTex, plain text etc.)
+* Pandoc is used to merge the model documentation and a reference template together and produce final documentation in a desired output format. The reference template contains corporate branding and styles that are applied to the raw (e.g. Markdown) documentation.
+* The resulting file is stored either as part of the project or exported to an external document repository (e.g. a dedicated Model Risk Management solution)
+
