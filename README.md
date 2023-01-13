@@ -80,4 +80,10 @@ The model documentation workflow is implemented as follows:
 
 Let's start with generating documentation in Microsoft Word format.
 
-The model documentation is kept in Markdown format in a file named [sample.md](sample.md)
+1. The model documentation is kept in Markdown format in a file named [sample.md](sample.md). This file contains standard Markdown, featuring title and paragraph styles, bullet lists, and some LaTeX.
+2. we need to prepare a reference template that contains the styles and formatting we'd like to apply to the Markdown content. The recommended way to prepare the reference is to ask Pandoc to build the initial version, and then to manually customise it according to our requirements. The following Pandoc command generates the reference template:
+```
+$ pandoc -o custom-reference.docx --print-default-data-file reference.docx
+```
+3. We can edit this document and change the styles to match the required branding. For example, we can insert our company logo in the header, change Heading 1's colour to red, and change the body text style to Times New Roman size 13. The resulting file is stored as part of this project and named [rendering/reference.docx](rendering/reference.docx)
+4. 
