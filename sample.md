@@ -1,4 +1,5 @@
-# Sample Model Documentation
+Sample Model Documentation
+==========================
 
 *Note: The sample text in this section is taken from [Logistic Regression Credit Scorecard](https://www.openriskmanual.org/wiki/Logistic_Regression_Credit_Scorecard), CC BY-NC-SA 4.0, [openriskmanual.org](openriskmanual.org)*
 
@@ -38,9 +39,7 @@ The Explanatory Variables form an n dimensional vector $x$ that comprises potent
 A $n+1$ dimensional vector $\beta$ (including the offset as the zero-th element) of parameters to be estimated
 
 ### The Functional Form
-$$\begin{equation}
-p_i = \frac{\text{exp}\beta^T x_i}{1+\text{exp}\beta^T x_i}
-\end{equation}$$
+$$p_i = \frac{\text{exp}\beta^T x_i}{1+\text{exp}\beta^T x_i}$$
 
 ### Model Estimation
 Estimation is via Maximum Likelihood. Given a vector of realized outcomes $D_i$ the likelihood function $L$ is:

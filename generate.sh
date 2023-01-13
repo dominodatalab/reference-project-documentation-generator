@@ -1,13 +1,10 @@
 #!/bin/bash
 
 # sample.md - documentation in Markdown format
-# rendering - localtion of the reference template file
+# rendering/reference.docx - reference template file
 
-# merge Markdown using the reference template and create an output file
-pandoc -f markdown -t odt sample.md --data-dir=rendering/ -o output.odt
- 
-# convert the output file to docx
-libreoffice --invisible --convert-to docx --outdir output output.odt
+# merge Markdown using the reference template and create an output file (Microsoft Word)
+pandoc -f markdown -t docx sample.md --reference-doc=rendering/reference.docx -o output/sample.docx
 
-# convert the output file to pdf
-libreoffice --invisible --convert-to pdf --outdir output output.odt
+# convert the Microsoft Word document to PDF and place it in the output folder
+libreoffice --invisible --convert-to pdf --outdir output output/sample.docx
