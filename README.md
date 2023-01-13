@@ -1,6 +1,19 @@
 # reference-project-documentation-generator
 Use Pandoc, LaTeX, and LibreOffice to automatically generate pixel perfect project documentation
 
+Model documentation is a formal collection of documents that provide explanation of the rationale, assumptions, derivations, tests, validation, and other analyses that justify the model's fitness for purpose. They are often mandated by various regulatory bodies and maintaining a comprehensive model documentation is essential for running a reliable and explainable data science-backed decision process. Model accompanying documentation often features (but is not limited to):
+* What the model does and what is the justification and intended use-case
+* Model inputs, training data, assumptions, parameters, algorithms, processing techniques, theoretical underpinnings of the model, what calculations are used etc.
+* Validation and testing techniques
+* Model outputs and interpretation
+* Baseline performance and monitoring strategies
+
+Ideally, model documentation is maintained in a format that is open, easy for automatic processing, and straightforward for versioning. One such format is Markdown, which is easy to parse, validate, and process in an automated fashion. On the other hand, using Markdown for model documentation can often be problematic, because businesses have sometimes established risk management practices that rely on proprietary format templates (e.g. Word documents, PDF files etc.)
+
+One workflow that handles this situation well is via Pandoc, a free framework for converting files from one markup format into another. Pandoc supports a wide range of file formats like Markdown and Wiki markup formats, LaTeX, Microsoft Word, RTS, LibreOffice ODT, PDF, Microsoft Powerpoint, various e-book standards and more.
+
+In this project we demonstrate a workflow for producing pixel-perfect model documentation by merging markdown with a Microsoft Word template and applying the relevant styles and formatting to the resulting document.
+
 ## Prerequisites
 
 This project uses standard python libraries and any base Domino image should work well. The last test was done on quay.io/domino/compute-environment-images:ubuntu20-py3.9-r4.2-domino5.3-standard
