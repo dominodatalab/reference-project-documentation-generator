@@ -86,4 +86,11 @@ Let's start with generating documentation in Microsoft Word format.
 $ pandoc -o custom-reference.docx --print-default-data-file reference.docx
 ```
 3. We can edit this document and change the styles to match the required branding. For example, we can insert our company logo in the header, change Heading 1's colour to red, and change the body text style to Times New Roman size 13. The resulting file is stored as part of this project and named [rendering/reference.docx](rendering/reference.docx)
-4. 
+4. We can now use Pandoc to process *sample.md* and apply the formatting from *reference.docx*.
+```
+$ pandoc -f markdown -t docx sample.md --reference-doc=rendering/reference.docx -o sample.docx
+```
+The resulting file is named [sample.docx](output/sample.docx) and it contains the text from the Markdown file with the formatting of the reference template.
+
+### Automatic generation
+This project features a simple shell script [generate.sh](generate.sh), which executes the merging from step 4 above and can be run on demand (or schedule) when the model documentation (i.e. *sample.md*) changes. The script also makes a headless call to [libreoffice](https://www.libreoffice.org/) to also generate a PDF file alongside the Microsoft Word document.
