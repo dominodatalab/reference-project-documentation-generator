@@ -76,3 +76,8 @@ The model documentation workflow is implemented as follows:
 * Pandoc is used to merge the model documentation and a reference template together and produce final documentation in a desired output format. The reference template contains corporate branding and styles that are applied to the raw (e.g. Markdown) documentation.
 * The resulting file is stored either as part of the project or exported to an external document repository (e.g. a dedicated Model Risk Management solution)
 
+### Simple walktrough
+
+Let's start with generating documentation in Microsoft Word format.
+
+The model documentation is kept in Markdown format in a file named [sample.md](sample.md)
