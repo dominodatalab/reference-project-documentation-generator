@@ -1,5 +1,5 @@
 # reference-project-documentation-generator
-Use Pandoc, LaTeX, and LibreOffice to automatically generate pixel perfect project documentation
+Use Pandoc, LaTeX, and LibreOffice to automatically generate pixel perfect model documentation
 
 Model documentation is a formal collection of documents that provide explanation of the rationale, assumptions, derivations, tests, validation, and other analyses that justify the model's fitness for purpose. They are often mandated by various regulatory bodies and maintaining a comprehensive model documentation is essential for running a reliable and explainable data science-backed decision process. Model accompanying documentation often features (but is not limited to):
 * What the model does and what is the justification and intended use-case
